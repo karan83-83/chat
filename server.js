@@ -18,7 +18,7 @@ app.use('/uploads', express.static('uploads'));
 
 app.use(cors({
   methods: ["POST", "GET", "PATCH", "DELETE"],
-  origin: "http://localhost:5173",
+  origin: "https://chatApp.onrender.com",
   credentials: true
 }));
 
@@ -32,7 +32,7 @@ const server = http.createServer(app);
 // SOCKET.IO setup
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chatApp.onrender.com",
     methods: ["GET", "POST"]
   }
 });
